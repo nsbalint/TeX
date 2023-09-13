@@ -1,0 +1,57 @@
+\documentclass[titlepage,twoside]{article}
+\usepackage{t1enc}
+\usepackage[english,magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hulipsum}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{geometry}
+\title{Book}
+\author{Patak}
+
+\setcounter{tocdepth}{5} 
+\setcounter{secnumdepth}{5}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\geometry{inner=3cm,outer=5cm}
+\geometry{bindingoffset=1cm}
+\geometry{marginparwidth=3cm}
+\geometry{marginparsep=0.5cm}
+
+
+\begin{document}
+\maketitle
+\begin{abstract}
+ \hulipsum[2]
+\end{abstract}
+
+\footnote{footnote}
+\tableofcontents  \pagenumbering{roman} \clearpage
+\pagenumbering{arabic}
+\section[Első bekezdés]{Első bekezdés} \footnote{fn}
+ \subsection{Első albekezdés}
+ \hulipsum[2]
+  \subsection{Második albekezdés}
+  \hulipsum[3]
+\section{Második bekezdés}
+
+\subsection{1}
+\setlength{\parskip}{12pt}
+\setlength{\parindent}{0pt}
+\hulipsum[3] \medbreak
+ \subsubsection{2}
+ 
+\today \smallbreak \raggedleft{\lipsum[3]} \par  \medbreak
+ \paragraph{3} 
+ \bigskip
+ \frenchspacing \linespread{1.6}\selectfont {\blindtext[3]} \par \medbreak
+ \subparagraph{4} \medbreak
+ 
+
+
+
+
+
+
+
+
+\end{document}

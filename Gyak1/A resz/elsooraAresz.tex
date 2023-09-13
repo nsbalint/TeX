@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hulipsum}
+
+\begin{document}
+\large \textbf{\textit{Helló Világ! Így néz ki bold és italic-kal.}}
+\color{blue}
+
+\texttt{Ez a LateX. Így pedig a typewriter font-tal.}
+
+\color{black}
+A szöveg alapból így néz ki de {\sl így is nézhet ki slanteddal.}\bigskip
+
+Tükrözve vízszintesen.\par
+\scalebox{-2.0}{\rotatebox[origin=c]{90}{\raisebox{\depth}{\scalebox{1}[-1]{Tükrözve vízszintesen}}}} \par\bigskip
+\colorbox{red}{Tükrözve vízszintesen.\par
+\rotatebox[origin=c]{270}{\raisebox{\depth}{\scalebox{1}[-1]{Tükrözve vízszintesen}}}} \par\bigskip
+
+Tükrözve függőlegesen.\par
+\framebox{\raisebox{\depth}{\scalebox{-1}[-1]{Tükrözve függőlegesen.}}} \par\bigskip
+\colorbox{black} {\color{white} Fehér}
+
+\color{red}
+\framebox{Piros}
+\end{document}

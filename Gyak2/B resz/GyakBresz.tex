@@ -1,0 +1,118 @@
+\documentclass[titlepage,12pt]{article}
+\usepackage{t1enc}
+\usepackage[english,magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hulipsum}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\title{Book}
+\author{Patak}
+\usepackage[inline]{enumitem}
+\usepackage{fancyhdr}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\setcounter{tocdepth}{5} 
+\setcounter{secnumdepth}{5}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\geometry{inner=3cm,outer=5cm}
+\geometry{bindingoffset=1cm}
+\geometry{marginparwidth=3cm}
+\geometry{marginparsep=0.5cm}
+\patchcmd{\titlepage}
+	{\thispagestyle{empty}}
+	{\thispagestyle{plain}}
+	{}
+	{}
+
+
+\begin{document}
+\fancypagestyle{fancy}{\fancyhf[R]{\thepage}}
+
+\maketitle
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf[L]{\markright}
+\fancyhf[HC]{Miskolci Egyetem}
+\fancyhf[R]{\thepage}
+\fancyhf[HLO]{\leftmark}
+\fancyhf[HLE]{\rightmark}
+
+\begin{itemize*}[label=\checkmark, itemjoin*={~es~}]
+\item egy
+\item ketto
+\item harom
+\end{itemize*}
+
+\begin{enumerate}
+\item a
+\begin{enumerate}[label=(\alph*)]
+\item b
+\begin{enumerate}
+\item c
+\begin{enumerate}
+\item d
+\label{mylabel1}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+ \begin{enumerate}[resume*]
+ \item e
+ \end{enumerate}
+
+\newcounter{mycounter}
+\begin{description}[style=sameline]
+\item[]
+\item[] \lipsum[1]
+\item[] \label{mylabel2}
+\end{description}
+
+\fancypagestyle{plain}{\fancyhf}
+\begin{abstract}
+ \hulipsum[2]
+\end{abstract}
+
+\footnote{footnote}
+\tableofcontents  \pagenumbering{roman} \clearpage
+\pagenumbering{arabic}
+\section[Első bekezdés]{Első bekezdés}\footnote{fn}
+\label{mylabel}
+\pageref{mylabel1}
+\pageref{mylabel2}
+\pageref{mylabel3}
+\pageref{mylabel4}
+\ref{mylabel}
+ \subsection{Első albekezdés}
+ \hulipsum[2]
+  \subsection{Második albekezdés}
+  \hulipsum[3]
+\section{Második bekezdés}
+\label{mylabel3}
+
+\subsection{1}
+\setlength{\parskip}{12pt}
+\setlength{\parindent}{0pt}
+\hulipsum[3] \medbreak
+ \subsubsection{2}
+ \label{mylabel4}
+
+\today \smallbreak \raggedleft{\lipsum[3]} \par  \medbreak
+ \paragraph{3} 
+ \bigskip
+ \frenchspacing \linespread{1.6}\selectfont {\blindtext[3]} \par \medbreak
+ \subparagraph{4} \medbreak
+ 
+
+
+
+
+
+
+
+
+\end{document}

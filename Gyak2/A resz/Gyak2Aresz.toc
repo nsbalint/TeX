@@ -1,0 +1,8 @@
+\select@language {magyar} \contentsline {section}{\numberline {1}Első bekezdés}{1}{section.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1}Első albekezdés}{1}{subsection.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2}Második albekezdés}{1}{subsection.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2}Második bekezdés}{2}{section.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1}1}{2}{subsection.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.1.1}2}{2}{subsubsection.2.1.1}%
+\select@language {magyar} \contentsline {paragraph}{\numberline {2.1.1.1}3}{3}{paragraph.2.1.1.1}%
+\select@language {magyar} \contentsline {subparagraph}{\numberline {2.1.1.1.1}4}{4}{subparagraph.2.1.1.1.1}%

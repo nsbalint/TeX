@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\newtheorem{tet}{Tetel}
+\newtheorem{lemma}[tet]{Lemma}
+\newtheorem{defin}[tet]{Definíció}
+\usepackage{babel}[magyar]
+
+\begin{document}
+\section{Elso section}
+\begin{tet}[PatakBro]
+\lipsum[1]
+\end{tet}
+\begin{proof}
+Sheesh
+\end{proof}
+\begin{proof}
+Big Bro
+\end{proof}
+\begin{tet}
+\lipsum[1]
+\end{tet}
+
+\section{Masodik section}
+
+\begin{lemma}
+\lipsum[1]
+\end{lemma}
+
+\begin{defin}
+\lipsum[1]
+\end{defin}
+
+\section{Bevezető}
+
+a) Az $\frac{1}{n^2}$ sorösszege:
+\[ \sum_{n=1}^\infty \frac{1}{n^2}
+= \frac{\pi^2}{6} \]
+
+b)Az n! (n faktoriális) a számok szorzata 1-től n-ig, azaz
+\[ n!:=\prod_{k=1}^\infty = 1\cdot 2 \cdot....\cdot n  \]
+c) Legyen 0  k  n. A binomiális együttható
+\[\binom{n}{k}:= \frac{n!}{k!\cdot(n-k)!}\]
+
+d) Az előjel- azaz szignum függvényt a következőképpen definiáljuk:
+
+\[ sgn(x):=\begin{cases}
+1, & \text{ha } x > 0, \\
+0, & \text{ha } x = 0 \\ 
+-1 & \text{ha } x < 0. \end{cases} \]
+
+
+\section{Determináns}
+\subsection{a}
+Legyen\[[n]:=\{1, 2, \ldots, n\}\] a természetes számok halmaza 1-től n-ig.
+ 
+\subsection{b}
+Egy \(n\)-edrendű permutáció, \(\sigma\), egy bijekció a \([n]\) halmazból a \([n]\) halmazba. Az \(n\)-edrendű permutációk halmazát, az ún. szimmetrikus csoportot, \(S_n\)-nel jelöljük
+ 
+\subsection{c}
+Egy \(\sigma \in S_n\) permutációban inverzió egy \((i, j)\) párt jelent, ha \(i < j\) és \(\sigma_i > \sigma_j\).
+ 
+\subsection{d}
+Egy \(\sigma \in S_n\) permutáció paritását az inverziók számával jellemezzük:
+\[ I(\sigma) = {|(i, j) \ i < j,\ i, j \in [n],\ \sigma_i > \sigma_j}| \]
+ 
+\subsection{e}
+Legyen \(A \in \mathbb{R}^{n \times n}\) egy \(n \times n\)-es (négyzetes) valós mátrix.
+\[ A =
+\begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{bmatrix}
+\]
+Az A mátrix determinánsát a következőképpen definiáljuk:
+\[
+\det(A) = \begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{bmatrix} := \sum_{\sigma \in S_n} (-1)^{I(\sigma)} \prod_{i=1}^{n} a_{i\sigma(i)}
+\]
+ 
+\section{Logikai azonosság}
+\subsection{A)}
+\begin{align*}
+(a \land b \land c) \rightarrow d & =  a \rightarrow (b \rightarrow (c \rightarrow d)) \\
+\end{align*}
+ 
+\subsection{B)}
+\begin{align*}
+x \rightarrow y & = \overline{x} \lor y  \\
+\overline{x \lor y} & = \overline{x} \land \overline{y} \\
+\overline{x \land y} & = \overline{x} \lor \overline{y} \\
+\end{align*}
+ \subsection{C)}
+\begin{align*}
+(a \land b \land c) \rightarrow d & = \overline{a \land b \land c} \lor d & \\
+=(\overline{a} \lor \overline{b} \lor \overline{c}) \lor d  \\
+\end{align*}
+
+\section{Binominális képlet}
+\begin{subequations}
+\begin{align}
+(a+b)^{n+1} &= (a+b) \cdot \left( \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k \right)\\
+&\nonumber =\cdots\\
+&= \sum_{k=0}^n \binom{n}{k} a^{(n+1)-k}b^k + \sum_{k=1}^{n+1} \binom{n}{k-1} a^{(n+1)-k}b^{k} \\
+&\nonumber =\cdots\\
+\begin{split} &= \binom{n+1}{0} a^{n+1-0} b^0 + \sum_{k=1}^n \binom{n+1}{k} a^{(n+1)-k}b^k \\
+&+ \binom{n+1}{n+1} a^{n+1-(n+1)} b^{n+1} \end{split} \\
+&= \sum_{k=0}^{n+1} \binom{n+1}{k} a^{(n+1)-k}b^k
+\end{align}
+\end{subequations}
+\end{document}

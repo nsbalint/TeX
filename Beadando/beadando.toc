@@ -1,0 +1,14 @@
+\select@language {magyar} \beamer@sectionintoc {1}{Bevezetés}{3}{0}{1}
+\select@language {magyar} \beamer@sectionintoc {2}{Nevezetes problémák}{6}{0}{2}
+\select@language {magyar} \beamer@subsectionintoc {2}{1}{Lista}{6}{0}{2}
+\select@language {magyar} \beamer@sectionintoc {3}{Megoldott problémák}{7}{0}{3}
+\select@language {magyar} \beamer@subsectionintoc {3}{1}{Nagy Fermat-tétel}{7}{0}{3}
+\select@language {magyar} \beamer@subsectionintoc {3}{2}{Waring-probléma}{10}{0}{3}
+\select@language {magyar} \beamer@subsectionintoc {3}{3}{Tökéletes számok}{12}{0}{3}
+\select@language {magyar} \beamer@subsubsectionintoc {3}{3}{1}{Tökéletes számok keresése Pythonban}{13}{0}{3}
+\select@language {magyar} \beamer@sectionintoc {4}{Máig megoldatlan problémák}{14}{0}{4}
+\select@language {magyar} \beamer@subsectionintoc {4}{1}{Fermat-prímek}{14}{0}{4}
+\select@language {magyar} \beamer@subsubsectionintoc {4}{1}{1}{Prímszámok}{16}{0}{4}
+\select@language {magyar} \beamer@subsubsectionintoc {4}{1}{2}{Videó Fernat-prímekről}{17}{0}{4}
+\select@language {magyar} \beamer@subsectionintoc {4}{2}{Ikerprím-sejtés}{18}{0}{4}
+\select@language {magyar} \beamer@sectionintoc {5}{Forrásjegyzék}{19}{0}{5}
